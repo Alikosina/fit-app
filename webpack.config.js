@@ -28,7 +28,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         use: [
           "style-loader",
           // Use CSS Modules
@@ -37,7 +37,17 @@ module.exports = {
             options: {
               modules: true
             }
-          }
+          },
+          //   {
+          //     loader: "typings-for-css-modules-loader",
+          //     options: {
+          //       modules: true,
+          //       namedExport: true,
+          //       camelCase: true,
+          //       localIdentName: "[name]_[local]_[hash:base64]"
+          //     }
+          //   },
+          "sass-loader"
         ]
       },
       {
