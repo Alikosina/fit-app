@@ -1,5 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { TypedCssModulesPlugin } = require("typed-css-modules-webpack-plugin");
+
+const isDevelopment = process.env.NODE_ENV === "development";
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -25,16 +28,15 @@ module.exports = {
         }
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.css$/,
         use: [
+          "style-loader",
+          // Use CSS Modules
           {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "sass-loader"
+            loader: "css-loader",
+            options: {
+              modules: true
+            }
           }
         ]
       },
@@ -68,10 +70,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
+    }),
+    new TypedCssModulesPlugin({
+      globPattern: "src/**/*.css"
     })
   ],
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".scss"],
     alias: {
       "@app": path.resolve(__dirname, "./src"),
       "@containers": path.resolve(__dirname, "./src/containers"),
