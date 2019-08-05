@@ -1,14 +1,13 @@
 import * as React from "react";
-import * as styles from "./App.module.scss";
-import TargetBlock from "../../components/TargetBlock/TargetBlock";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainPage from "../../pages/mainPage/MainPage"
 
 const AppContainer = () => (
-  <div className={styles.app}>
-    <h1>Hello Fit App!</h1>
-    <div>
-      <TargetBlock image="some image" description="Показатели веса" />
-    </div>
-  </div>
+  <Router>
+  <Switch>
+    <Route path="/" component={MainPage} />
+  </Switch>
+  </Router>
 );
 
 export default AppContainer;
