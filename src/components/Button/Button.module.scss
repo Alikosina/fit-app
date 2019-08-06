@@ -1,0 +1,41 @@
+.button{
+    color: #000 !important;
+    background: gainsboro;
+    max-width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s all;
+    color: #000;
+}
+.active{
+    background: #fff747 !important;
+    color: #000 !important ;
+}
+.active:hover{
+    cursor: pointer;
+    transition: 0.5s all;
+    margin: 15px auto 0 auto !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.description{
+    font-weight: bold;
+    color: #000 !important;
+}
+
+.disabled{
+    background: gainsboro;
+}
+.disabled .description{
+    color: #949492 !important;
+}
+
+
+
+
+

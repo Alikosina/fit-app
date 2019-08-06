@@ -9,8 +9,16 @@ import * as styles from "./MainPage.module.scss";
 const MainPage = () => (
     <div className={styles.app}>
     <h1>Hello Fit App!</h1>
-    <div>
-      <TargetBlock image={icon} description="Показатели веса" />
+    <div className={styles.block}>
+    <div className={styles.item}>
+      <TargetBlock  image={icon}  />
+    </div>
+    <div className={styles.item}>
+      <TargetBlock disabled image={icon}  />
+    </div>
+    <div className={styles.item}>
+      <TargetBlock disabled image={icon}  />
+    </div>
     </div>
   </div>
 );
