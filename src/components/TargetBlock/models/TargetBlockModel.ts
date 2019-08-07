@@ -6,5 +6,6 @@ export namespace TargetBlockModel {
         description ?: string
         classname ?: string
         disabled ?: boolean
+        path ?: string
     }
 }

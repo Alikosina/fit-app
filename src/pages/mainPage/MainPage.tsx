@@ -6,12 +6,13 @@ import * as styles from "./MainPage.module.scss";
 
 
 
+
 const MainPage = () => (
     <div className={styles.app}>
     <h1>Hello Fit App!</h1>
     <div className={styles.block}>
     <div className={styles.item}>
-      <TargetBlock  image={icon}  />
+      <TargetBlock path='weight-form'  image={icon}  />
     </div>
     <div className={styles.item}>
       <TargetBlock disabled image={icon}  />
