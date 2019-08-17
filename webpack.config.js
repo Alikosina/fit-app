@@ -63,13 +63,17 @@ module.exports = {
       //   ]
       // },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[path][name].[ext]"
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "assets/img/",
+              publicPath: "/assets/img/"
+            }
           }
-        }
+        ]
       }
     ]
   },
@@ -87,7 +91,8 @@ module.exports = {
       "@app": path.resolve(__dirname, "./src"),
       "@containers": path.resolve(__dirname, "./src/containers"),
       "@components": path.resolve(__dirname, "./src/components"),
-      "@store": path.resolve(__dirname, "./src/store")
+      "@store": path.resolve(__dirname, "./src/store"),
+      "@img": path.resolve(__dirname, "src/assets/img")
     }
   }
 };

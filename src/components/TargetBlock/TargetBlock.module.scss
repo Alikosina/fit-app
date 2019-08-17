@@ -1,29 +1,33 @@
-.target{
-    background: #fff;
-    position: relative;
-    width: 320px;
-    padding: 20px 0;
-    height: 200px;
-    text-align: center;
-    border: 1px solid #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    &_item {
-        color: green;
-    }
+.target {
+  background: #fff;
+  position: relative;
+  width: 320px;
+  padding: 20px 0;
+  height: 200px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  &_item {
+    color: green;
+  }
 }
-.img{
-    width: 200px;
-    height: 100px;
-    border-radius: 10px;
-    border: 1px;
-    margin: 10px auto 20px auto;
-    background: #5460F9;
-    background: -moz-linear-gradient(top left, #5460F9, #5BFFF2);
-    background: -webkit-linear-gradient(top left, #5460F9, #5BFFF2);
-    background: linear-gradient(to bottom right, #5460F9, #5BFFF2);
+.img {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px;
+  margin: 10px auto 20px auto;
+  background: #5460f9;
+  background: -moz-linear-gradient(top left, #5460f9, #5bfff2);
+  overflow: hidden;
+  background: -webkit-linear-gradient(top left, #5460f9, #5bfff2);
+  background: linear-gradient(to bottom right, #5460f9, #5bfff2);
+  & img {
+    width: 100%;
+  }
 }
-.target a{
-    text-decoration: none;
-    color: #000;
+.target a {
+  text-decoration: none;
+  color: #000;
 }

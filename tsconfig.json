@@ -13,6 +13,10 @@
         }
       }
     ],
+    "baseUrl": ".",
+    "paths": {
+      "@img/*": ["src/assets/img/*"]
+    },
     "allowJs": true,
     "checkJs": false,
     "outDir": "./dist/",
