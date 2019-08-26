@@ -38,30 +38,22 @@ module.exports = {
               modules: true
             }
           },
-          //   {
-          //     loader: "typings-for-css-modules-loader",
-          //     options: {
-          //       modules: true,
-          //       namedExport: true,
-          //       camelCase: true,
-          //       localIdentName: "[name]_[local]_[hash:base64]"
-          //     }
-          //   },
           "sass-loader"
         ]
       },
-      // {
-      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      //   use: [
-      //     {
-      //       loader: "file-loader",
-      //       options: {
-      //         name: "[name].[ext]",
-      //         outputPath: "fonts/"
-      //       }
-      //     }
-      //   ]
-      // },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "/assets/fonts/",
+              publicPath: "/assets/fonts/"
+            }
+          }
+        ]
+      },
       {
         test: /\.(png|jpg|gif)$/,
         use: [
@@ -69,7 +61,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/img/",
+              outputPath: "/assets/img/",
               publicPath: "/assets/img/"
             }
           }
